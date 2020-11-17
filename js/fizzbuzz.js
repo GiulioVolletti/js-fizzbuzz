@@ -1,14 +1,23 @@
+var stampa = document.getElementById('log_stampato').innerHTML
+
+
 // Scrivi un programma che stampi i numeri da 1 a 100,
 for (var i = 1; i < 101; i++) {
   // ma per i multipli di 3 stampi “Fizz” al posto del numero e per i multipli di 5 stampi Buzz.
   if ((i % 5 == 0) && (i % 3 == 0)) {
     // Per i numeri che sono sia multipli di 3 che di 5 stampi FizzBuzz.
+    stampa += "FizzBuzz" + "<br>";
     console.log("FizzBuzz");
   } else if (i % 5 == 0) {
     console.log("Buzz");
+    stampa += "Buzz" + "<br>";
   } else if (i % 3 == 0) {
     console.log("Fizz");
+    stampa += "Fizz" + "<br>";
   } else {
     console.log(i);
+    stampa += i + "<br>";
   }
 }
+document.getElementById('log_stampato').innerHTML += stampa
+console.log(stampa);
